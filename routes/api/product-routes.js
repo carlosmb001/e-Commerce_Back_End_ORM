@@ -3,7 +3,7 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // The `/api/products` endpoint
 
-// https://localhost:3000//api/products
+// https://localhost:3000/api/products
 
 router.get('/', async (req, res) => {
   try {
