@@ -3,7 +3,7 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // The `/api/products` endpoint
 
-// https://localhost:3000/api/products
+// https://localhost:3001/api/products
 
 router.get('/', async (req, res) => {
   try {
@@ -59,7 +59,7 @@ router.post('/', async (req, res) => {
       product_name: "Basketball",
       price: 200.00,
       stock: 3,
-      tagIds: [1, 2, 3, 4]
+      category_id: [1, 2, 3, 4]
     }
   */
     console.log("Request Body: ", req.body); 
@@ -80,7 +80,7 @@ router.post('/', async (req, res) => {
       await ProductTag.bulkCreate(productTagIdArr);
     }
     // If no associated tagIds, respond with the created product
-    res.status(201).json(product);
+    res.status(200).json(product);
   } catch (err) {
     // Log the error and respond with an error status
     console.log(err);
