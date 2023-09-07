@@ -25,7 +25,7 @@ DB_PW='your_mysql_password'
 ```
 4. Create the database using MySQL commands
 ```bash
-source db/schema.sql
+source db/schema.sql;
 ```
 5. Seed the database
 ```bash
